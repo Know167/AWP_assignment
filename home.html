@@ -1,0 +1,80 @@
+
+<div class="container">
+	<div class="jumbotron py-3">
+		<div class="coronaimg" style="display: flex; justify-content: space-around; align-items: center; ;">
+			<div style="color: #59bfff;"><h2>Cororna</h2></div>
+			<img style="border-radius: 20px; height: 180px; width: 410px;box-shadow: lightgrey 4px 4px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb2LSLcEajOOhuu09f4j11JF9RCChma9L6mw&usqp=CAU"/>
+			<div style="color: #59bfff;"><h2>Cases</h2></div>
+		</div>
+		<h1 class="text-center" style="height: 60px;box-shadow: grey 3px 3px; border: 3px solid black; margin: 10px; border-radius: 10px;">{{title}}</h1>
+		
+		<!-- all-data -->
+
+		<div class="row text-center">
+			<div class="col-md-4">
+				<div class="card bg-warning text-white" style="box-shadow: lightgrey 4px 4px; border-radius: 6px;">
+					<div class="card-body">
+						<h3>Confirmed Cases</h3>
+						<h3>{{all_data.confirmed.value}}</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="card bg-success text-white"  style="box-shadow: lightgrey 4px 4px; border-radius: 6px;">
+					<div class="card-body">
+						<h3>Recovered Cases</h3>
+						<h3>{{all_data.recovered.value}}</h3>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="card bg-danger text-white"  style="box-shadow: lightgrey 4px 4px; border-radius: 6px;">
+					<div class="card-body">
+						<h3>Death Cases</h3>
+						<h3>{{all_data.deaths.value}}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!-- End-all-data -->
+		<input type="text" class="form-control mt-4" placeholder="country" ng-model="c" ng-change="get_c_data()">
+		<!-- c data -->
+		<div class="container-fluid" ng-if="c_data">
+		<h1 class ="text-center mt-4 text-uppercase">{{c}} status</h1>
+		<div class="row text-center mt-4">
+			<div class="col-md-4">
+				<div class="card bg-warning text-white">
+					<div class="card-body">
+						<h3>Confirmed Cases</h3>
+						<h3>{{c_data.confirmed.value}}</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="card bg-success text-white">
+					<div class="card-body">
+						<h3>Recovered Cases</h3>
+						<h3>{{c_data.recovered.value}}</h3>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="card bg-danger text-white">
+					<div class="card-body">
+						<h3>Death Cases</h3>
+						<h3>{{c_data.deaths.value}}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="color: grey; font-size: 15px; display: flex; align-items: flex-end; justify-content: end;">
+	<div style="background-color: rgb(247, 247, 247); border-radius: 2px; padding: 4px;  position: fixed;
+		right: 0px; bottom: 0px;">by Jatin Patel(191200116035)</div></div>
+</div>
